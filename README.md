@@ -1,14 +1,14 @@
-<h5 align="center"> Avaliacao-Tinnova </h5>
+ <h5 align="center"> <img src = "https://tinnova.com.br/wp-content/uploads/2021/05/logo_dark.png" </h5>
 
- <h5 align="center">  Avaliação Desenvolvedor Java Junior </h5>
-
- <br>
+ <p align="center">
+      <h3 align="center"> Avaliação Desenvolvedor Java Junior </h3>
+<p align="center">
 
 <p align="center">
-  <a href ="#clipboard-desafio"> Desafio </a>  • 
-  <a href ="#dart-escopo-do-cadastro-de-veículos"> Escopo do Projeto </a>  • 
-  <a href ="#computer-tecnologias-utilizadas"> Tecnologias </a>  • 
-  <a href ="#bulb-metodologia-utilizada"> Metodologia </a>  • 
+• <a href ="#clipboard-desafio"> Desafio </a>
+• <a href ="#card_index_dividers-escopo-do-cadastro-de-veículos"> Escopo do Projeto </a>
+• <a href ="#computer-tecnologias-utilizadas"> Tecnologias </a>
+• <a href ="#bulb-metodologia-utilizada"> Metodologia </a>
 </p>
 
 <h4 align="center"> 
@@ -52,7 +52,7 @@
 
 <br>
 
-## :dart: Escopo do Cadastro de Veículos
+## :card_index_dividers: Escopo do Cadastro de Veículos
 
 > **Requisitos Funcionais**
 
@@ -63,15 +63,15 @@
 - [x]  Exibir a informação da distribuição de veículos por década de fabricação
 - [x]  Exibir a informação da distribuição de veículos por fabricante
 - [x]  Exibir os carros registrados durante a última semana
-- [x]  Haver consistência das marcas fornecidas.
+- [x]  Haver consistência das marcas fornecidas
 
 <br>
 
 > **Requisitos Não Funcionais**
 
-- [x]  Linguagem Java;
-- [x]  Documentações.<br><br>
-
+- [x]  Linguagem Java
+- [x]  Documentações
+ 
 <br>
 
 ## :computer: Tecnologias Utilizadas
