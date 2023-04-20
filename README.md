@@ -1,5 +1,3 @@
- <h5 align="center"> <img src = "https://tinnova.com.br/wp-content/uploads/2021/05/logo_dark.png" </h5>
-
  <p align="center">
       <h3 align="center"> Avaliação Desenvolvedor Java Junior </h3>
 <p align="center">
