@@ -19,5 +19,84 @@
 *.tar.gz
 *.rar
 
+### Maven
+
+###
+
+target/
+
+.flattened-pom.xml
+
+release.properties
+
+dependency-reduced-pom.xml
+
+buildNumber.properties
+
+.mvn/timing.properties
+
+###
+
+### IDEs
+
+###
+## VSCode
+
+.vscode
+
+.jfrog_vscode/
+
+## Eclipse
+
+.metadata
+
+bin/
+
+tmp/
+
+*.tmp
+
+*.bak
+
+*.swp
+
+*~.nib
+
+local.properties
+
+.settings/
+
+.loadpath
+
+.recommenders
+
+.classpath
+
+.externalToolBuilders/
+
+*.launch
+
+.factorypath
+
+.springBeans
+
+.recommenders/
+
+.apt_generated/
+
+.apt_generated_test/
+
+.project
+
+.sts4-cached
+
+## JetBrains IntelliJ
+
+out/
+
+.idea/
+
+*.iml
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
