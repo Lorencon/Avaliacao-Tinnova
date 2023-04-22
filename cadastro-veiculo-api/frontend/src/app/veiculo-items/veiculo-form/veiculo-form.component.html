@@ -1,0 +1,113 @@
+<h1 class="mt-4">Veiculos</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">{{ veiculo.id ? 'Veiculo Editing' : 'Veiculo Registration' }}</li>
+</ol>
+
+<div class="container">
+    <form #veiculoForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-success" role="alert" *ngIf="success == true">
+                    Product saved/updated successfully!
+                </div>
+
+                <div class="alert alert-danger" role="alert" *ngFor="let erro of errors">
+                    {{ erro }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>ID:</label>
+                    <input type="text" class="form-control" disabled="true" [(ngModel)]="veiculo.id" name="id">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Veiculo:</label>
+                    <input type="text" class="form-control" [(ngModel)]="veiculo.veiculo" name="veiculo">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Marca:</label>
+                    <select [(ngModel)]="veiculo.marca" (ngModelChange)="veiculo.marca = $event.toUpperCase()" name="marca" class="form-control select2" style="border-radius: 4px">
+                        <option value="">Selecione uma marca</option>
+                        <option value="FORD">Ford</option>
+                        <option value="CHEVROLET">Chevrolet</option>
+                        <option value="TOYOTA">Toyota</option>
+                        <option value="HYUNDAI">Hyundai</option>
+                        <option value="RENAULT">Renault</option>
+                        <option value="VOLKSWAGEM">Volkswagen</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Ano:</label>
+                    <input type="text" class="form-control" [(ngModel)]="veiculo.ano" name="ano">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Descrição:</label>
+                    <input type="text" class="form-control" [(ngModel)]="veiculo.descricao" name="descricao">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Vendido:</label>
+                    <select type="text" class="form-control select2" [(ngModel)]="veiculo.vendido" name="vendido" style="border-radius: 4px">
+                        <option [value]="false" selected>Nao</option>
+                        <option [value]="true">Sim</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Cor:</label>
+                    <input type="text" class="form-control" [(ngModel)]="veiculo.cor" name="cor">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-success" *ngIf="!veiculo.id" >
+                    <i class="fa fa-save"></i>
+                    Save Product
+                </button>
+
+                <button type="submit" class="btn btn-primary" *ngIf="veiculo.id" >
+                    <i class="fa fa-sync-alt"></i>
+                    Update Product
+                </button>
+
+                <button type="submit" class="btn btn-danger ml-2" routerLink="/veiculos-list">
+                    <i class="fa fa-arrow-alt-circle-left"></i>
+                    return
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+</div>

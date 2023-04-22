@@ -1,0 +1,108 @@
+<h1 class="mt-4">Veiculos</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Veiculos visualization</li>
+</ol>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert" *ngIf="success">
+                {{ success }}
+            </div>
+
+            <div class="alert alert-danger" role="alert" *ngIf="failed">
+                {{ failed }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <button class="btn btn-warning" routerLink="/veiculos-form">
+                <i class="fa fa-plus"></i> New
+            </button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Veiculo</th>
+                        <th>Marca</th>
+                        <th>Ano</th>
+                        <th>Descrição</th>
+                        <th>Vendido</th>
+                        <th>Created</th>
+                        <th>Updated</th>
+                        <th>Cor</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let veiculo of veiculos">
+                        <td>{{ veiculo.id }}</td>
+                        <td>{{ veiculo.veiculo }}</td>
+                        <td>{{ veiculo.marca }}</td>
+                        <td>{{ veiculo.ano }}</td>
+                        <td>{{ veiculo.descricao }}</td>
+                        <td>{{ veiculo.vendido }}</td>
+                        <td>{{ veiculo.created }}</td>
+                        <td>{{ veiculo.updated }}</td>
+                        <td>{{ veiculo.cor }}</td>
+
+                        <td>
+
+                            <button class="btn btn-primary" routerLink="/{{ veiculo.id }}/veiculos-form">
+                                <i class="fa fa-edit"></i>
+                                <p>Editar</p>
+                            </button>
+
+                        </td>
+
+                        <td>
+                            <button  class="btn btn-danger" (click)="preDelete(veiculo)"
+                                    data-toggle="modal" data-target="#deleteModal" >
+                                <i class="fa fa-trash"></i>
+                                <p>Deletar</p>
+                            </button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div id="deleteModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Confirmation</h4>
+                </div>
+
+                <div class="modal-body" *ngIf="selectedVeiculo">
+                    Confirm the deletion of the veiculo  "{{selectedVeiculo.veiculo}}"?
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-success"
+                     (click)="deleteVeiculo()"
+                     data-dismiss="modal">Confirm</button>
+                    <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
