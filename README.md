@@ -23,9 +23,9 @@
 
 * **Votos em relação ao total de eleitores**
   * Faça uma classe com 3 métodos que calculam:
-     * o percentual dos votos válidos em relação ao total de eleitores
-     * o percentual de brancos em relação ao total de eleitores
-     * o percentual de nulos em relação ao total de eleitores
+     * O percentual dos votos válidos em relação ao total de eleitores
+     * O percentual de brancos em relação ao total de eleitores
+     * O percentual de nulos em relação ao total de eleitores
 <br>
 
 * **Algoritmo de ordenação Bubble Sort**
